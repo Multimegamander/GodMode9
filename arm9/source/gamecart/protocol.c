@@ -97,7 +97,6 @@ void Cart_Init(void)
 
     // Reset
     NTR_CmdReset();
-    ioDelay(0x40000);
     CartID = NTR_CmdGetCartId();
 
     // 3ds
@@ -107,7 +106,6 @@ void Cart_Init(void)
 
         NTR_CmdEnter16ByteMode();
         SwitchToCTRCARD();
-        ioDelay(0xF000);
 
         REG_CTRCARDBLKCNT = 0;
     }
